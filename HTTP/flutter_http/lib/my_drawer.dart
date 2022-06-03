@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_http/drawer_item.dart';
+import 'package:flutter_http/progress.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -12,6 +13,7 @@ class MyDrawer extends StatelessWidget {
           children: <Widget>[
             _buildPortfolioItem(context),
             _buildDivider(),
+            _buildProgressItem(context),
           ],
         ),
       ),
@@ -37,6 +39,30 @@ class MyDrawer extends StatelessWidget {
 
         Navigator.of(context).push(
           MaterialPageRoute(builder: (context) => DrawerItem()),
+        );
+      },
+    );
+  }
+
+  ListTile _buildProgressItem(BuildContext context) {
+    return ListTile(
+      title: Text(
+        'Portfolio',
+        style: TextStyle(color: Colors.white),
+      ),
+      leading: Icon(
+        Icons.work,
+        color: Colors.white,
+      ),
+      trailing: Icon(
+        Icons.arrow_right,
+        color: Colors.white,
+      ),
+      onTap: () {
+        Navigator.of(context).pop();
+
+        Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => Progress()),
         );
       },
     );

@@ -22,6 +22,12 @@ class PostsPage extends StatelessWidget {
                     (Post post) => ListTile(
                       title: Text(post.title),
                       subtitle: Text("${post.userId}"),
+                      onTap: () {
+                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: const Text("Hello snack"),
+                          duration: const Duration(seconds: 3)
+                        ));
+                    },
                     ),
                   )
                   .toList(),

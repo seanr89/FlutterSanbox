@@ -7,7 +7,7 @@ class DrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Portfolio'),
+        title: Text('Portfolio - Drawer Page'),
       ),
       body: Center(
         child: Text(
