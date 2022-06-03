@@ -1,5 +1,6 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:flutter_http/posts_page.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_http/progress.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),
-        home: APIWidge()
+        home: MyHomePage()
         //home: MyHomePage()
         // home: Scaffold (
         //   appBar: AppBar(title: const Text("Welcome to flutter"),
@@ -37,11 +38,12 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Welcome to the app"),
       ),
-      body: Column(children: [Progress(), TaskList()]),
+      body: PostsPage()
     );
   }
 }
 
+/*
 class APIWidge extends StatefulWidget {
   //const APIWidge({Key?: key}) : super(key: key);
   @override
@@ -69,4 +71,4 @@ class _APIResponseState extends State<APIWidge> {
         //body: _buildSuggestions(),
         );
   }
-}
+}*/
