@@ -45,7 +45,6 @@ class MyHomePage extends StatelessWidget {
 
 /*
 class APIWidge extends StatefulWidget {
-  //const APIWidge({Key?: key}) : super(key: key);
   @override
   _APIResponseState createState() => _APIResponseState();
 }
@@ -59,7 +58,6 @@ class _APIResponseState extends State<APIWidge> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
         // Add from here...
         appBar: AppBar(
