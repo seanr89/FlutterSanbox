@@ -38,12 +38,42 @@ class MyHomePage extends StatelessWidget {
         title: Text("Welcome to the app"),
       ),
       body: Column(children: [Progress(), TaskList()]),
+      drawer: Drawer(
+        // Add a ListView to the drawer. This ensures the user can scroll
+        // through the options in the drawer if there isn't enough vertical
+        // space to fit everything.
+        child: ListView(
+          // Important: Remove any padding from the ListView.
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Colors.red,
+              ),
+              child: Text('Drawer Header'),
+            ),
+            ListTile(
+              title: const Text('Item 1'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+            ListTile(
+              title: const Text('Item 2'),
+              onTap: () {
+                // Update the state of the app.
+                // ...
+              },
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
 
 class APIWidge extends StatefulWidget {
-  //const APIWidge({Key?: key}) : super(key: key);
   @override
   _APIResponseState createState() => _APIResponseState();
 }
@@ -57,7 +87,6 @@ class _APIResponseState extends State<APIWidge> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
         // Add from here...
         appBar: AppBar(
